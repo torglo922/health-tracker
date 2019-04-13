@@ -1,4 +1,5 @@
 import { bootstrap } from "vesper";
+import { GraphQLDate, GraphQLDateTime, GraphQLTime } from "graphql-iso-date";
 import { PointsController } from "./controller/PointsController";
 import { Points } from "./entity/Points";
 import { User } from "./entity/User";
@@ -8,7 +9,12 @@ bootstrap({
   controllers: [PointsController],
   entities: [Points, User],
   schemas: [__dirname + "/schema/**/*.graphql"],
-  cors: true
+  cors: true,
+  customResolvers: {
+    Date: GraphQLDate,
+    Time: GraphQLTime,
+    DateTime: GraphQLDateTime
+  }
 })
   .then(() => {
     console.log(
