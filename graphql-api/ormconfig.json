@@ -3,7 +3,7 @@
    "host": "localhost",
    "port": 3306,
    "username": "health",
-   "password": "pointstest",
+   "password": "points",
    "database": "healthpoints",
    "synchronize": true,
    "logging": false,
