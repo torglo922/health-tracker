@@ -1,9 +1,8 @@
-import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
-import { Points } from './Points';
+import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm";
+import { Points } from "./Points";
 
 @Entity()
 export class User {
-
   @PrimaryColumn()
   id: string;
 
