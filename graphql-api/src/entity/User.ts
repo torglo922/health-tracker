@@ -1,18 +1,18 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { Points } from './Points';
 
 @Entity()
 export class User {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryColumn()
+  id: string;
 
-    @Column()
-    firstName: string;
+  @Column()
+  firstName: string;
 
-    @Column()
-    lastName: string;
+  @Column()
+  lastName: string;
 
-    @Column()
-    age: number;
-
+  @OneToMany(() => Points, points => points.user)
+  points: Points[];
 }
