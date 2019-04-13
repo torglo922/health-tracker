@@ -8,7 +8,7 @@ import { User } from "./entity/User";
 
 const oktaJwtVerifier = new OktaJwtVerifier({
   clientId: '{yourClientId}',
-  issuer: 'https://{yourOktaDomain}.com/oauth2/default'
+  issuer: 'https://dev-278255.okta.com/oauth2/default'
 });
 
 bootstrap({
